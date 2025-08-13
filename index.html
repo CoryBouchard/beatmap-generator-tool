@@ -107,7 +107,8 @@
             const beatmap = analyzeAudioBuffer(audioBuffer);
 
             // 4. Display Results
-            beatmapOutput.value = JSON.stringify(beatmap, null, 4);
+            // The JSON is now stringified without extra formatting for a clean, single-line output.
+            beatmapOutput.value = JSON.stringify(beatmap);
             loadingIndicator.classList.add('hidden');
             resultsContainer.classList.remove('hidden');
             analyzeButton.disabled = false;
